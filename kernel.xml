@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<!-- Android Kernel -->
+  <project path="kernel_platform" name="kernel/superproject" revision="common-android14-6.1-lts" />
+  <project path="kernel_platform/build/kernel" name="kernel/build" revision="main-kernel-build-2023" >
+    <linkfile src="kleaf/bazel.sh" dest="tools/bazel" />
+    <linkfile src="kleaf/bazel.WORKSPACE" dest="WORKSPACE" />
+    <linkfile src="build_test.sh" dest="build/build_test.sh" />
+    <linkfile src="config.sh" dest="build/config.sh" />
+    <linkfile src="multi-switcher.sh" dest="build/multi-switcher.sh" />
+    <linkfile src="abi" dest="build/abi" />
+    <linkfile src="static_analysis" dest="build/static_analysis" />
+  </project>
+  <project path="kernel_platform/common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android14-6.1" />
+  <project path="kernel_platform/prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" revision="main-kernel-build-2023" clone-depth="1" />
+  <project path="kernel_platform/toolchain/prebuilts/ndk-r23" name="toolchain/prebuilts/ndk/r23" revision="main-kernel-build-2023" clone-depth="1" />
+  <project path="kernel_platform/common" name="kernel_arpi" revision="arpi14-6.1" remote="aosphacks" />
+
+</manifest>

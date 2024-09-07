@@ -1,7 +1,7 @@
 # Download Android source with local_manifests
  Refer to http://source.android.com/source/downloading.html
 
- $ repo init -u  https://github.com/AOSPHacks/local_manifests -b arpi14-pi4
+ $ repo init -u  https://github.com/AOSPHacks/manifests -b arpi14-pi4
  $ repo sync --force-sync
 
 # Build for Raspberry Pi 4
